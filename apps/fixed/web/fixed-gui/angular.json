@@ -1,0 +1,43 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "fixed-gui-lib": {
+      "root": "projects/fixed-gui-lib",
+      "sourceRoot": "projects/fixed-gui-lib/src",
+      "projectType": "library",
+      "prefix": "fixed-app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/fixed-gui-lib/tsconfig.lib.json",
+            "project": "projects/fixed-gui-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fixed-gui-lib/src/test.ts",
+            "tsConfig": "projects/fixed-gui-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/fixed-gui-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/fixed-gui-lib/tsconfig.lib.json",
+              "projects/fixed-gui-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "fixed-gui-lib"
+}

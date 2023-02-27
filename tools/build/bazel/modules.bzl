@@ -259,6 +259,7 @@ APP_MAP = {
     "//apps/ofagent:onos-apps-ofagent-oar": [],
     "//apps/onlp-demo:onos-apps-onlp-demo-oar": [],
     "//apps/openroadm:onos-apps-openroadm-oar": [],
+
     "//apps/openstacknetworking:onos-apps-openstacknetworking-oar": ["sona"],
     "//apps/openstacknetworkingui:onos-apps-openstacknetworkingui-oar": ["sona"],
     "//apps/openstacknode:onos-apps-openstacknode-oar": ["sona"],
@@ -281,6 +282,7 @@ APP_MAP = {
     "//apps/reactive-routing:onos-apps-reactive-routing-oar": [],
     "//apps/restconf:onos-apps-restconf-oar": [],
     "//apps/roadm:onos-apps-roadm-oar": [],
+    "//apps/fixed:onos-apps-fixed-oar": [],
     "//apps/route-service:onos-apps-route-service-oar": ["seba", "tost"],
     "//apps/routeradvertisement:onos-apps-routeradvertisement-oar": ["tost"],
     "//apps/routing/cpr:onos-apps-routing-cpr-oar": [],
@@ -339,6 +341,7 @@ MODELS_MAP = {
     "//models/openconfig-infinera:onos-models-openconfig-infinera-oar": [],
     "//models/openconfig-odtn:onos-models-openconfig-odtn-oar": [],
     "//models/openroadm:onos-models-openroadm-oar": [],
+
     "//models/tapi:onos-models-tapi-oar": [],
     "//models/l3vpn:onos-models-l3vpn-oar": [],
     "//models/microsemi:onos-models-microsemi-oar": [],

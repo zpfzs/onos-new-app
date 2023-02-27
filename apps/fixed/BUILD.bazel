@@ -1,0 +1,11 @@
+BUNDLES = [
+    "//apps/fixed/app:onos-apps-fixed-app",
+]
+
+onos_app(
+    category = "Graphical User Interface",
+    description = "ONOS OSGi GUI2 Custom-View app fixed.",
+    included_bundles = BUNDLES,
+    title = "Optical Application",
+    url = "http://onosproject.org",
+)

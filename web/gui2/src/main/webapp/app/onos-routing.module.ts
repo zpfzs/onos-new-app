@@ -19,6 +19,7 @@ import {Gui2TopoLibModule} from 'gui2-topo-lib';
 import {FmGui2LibModule} from 'fm-gui2-lib';
 import {intAppGui2LibModule} from 'int-gui2-lib';
 import {RoadmGuiLibModule} from 'roadm-gui-lib';
+import {FixedGuiLibModule} from 'fixed-gui-lib';
 
 /**
  * The set of Routes in the application - can be chosen from nav menu or
@@ -97,6 +98,10 @@ const onosRoutes: Routes = [
     {
         path: 'roadm-gui',
         loadChildren: 'roadm-gui-lib#RoadmGuiLibModule'
+    },
+    {
+        path: 'fixed-gui',
+        loadChildren: 'fixed-gui-lib#FixedGuiLibModule'
     },
     {
         path: 'intApp',

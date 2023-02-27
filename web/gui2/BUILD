@@ -128,6 +128,7 @@ genrule(
         ":_root_level_files",
         ":_web_app_all",
         "//apps/roadm/web/roadm-gui:roadm-gui-lib-build",
+        "//apps/fixed/web/fixed-gui:fixed-gui-lib-build",
     ],
     outs = [
         "onos-gui2-ng-build-prod.log",
@@ -154,6 +155,9 @@ genrule(
           " ROADM_GUI_LIB_FILES=($(locations //apps/roadm/web/roadm-gui:roadm-gui-lib-build)) &&" +  # An array of filenames - sorted by time created
           " tar xf $$ROOT/$${ROADM_GUI_LIB_FILES[0]} &&" +
           " mv package/ node_modules/roadm-gui-lib/ &&" +
+          " FIXED_GUI_LIB_FILES=($(locations //apps/fixed/web/fixed-gui:fixed-gui-lib-build)) &&" +  # An array of filenames - sorted by time created
+          " tar xf $$ROOT/$${FIXED_GUI_LIB_FILES[0]} &&" +
+          " mv package/ node_modules/fixed-gui-lib/ &&" +
           " INT_GUI2_LIB_FILES=($(locations //apps/inbandtelemetry/int-gui2-lib:int-gui2-lib-build)) &&" +  # An array of filenames - sorted by time created
           " tar xf $$ROOT/$${INT_GUI2_LIB_FILES[0]} &&" +
           " mv package/ node_modules/int-gui2-lib/ &&" +
